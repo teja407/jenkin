@@ -1,0 +1,49 @@
+sudo yum install ansible -y
+
+ls /etc/ansible/
+
+cp -r /etc/ansible .  24mar
+
+chmod 600 devops.pem
+
+copy test.pem to /ec2-user/ folder 
+
+vim inventory (ipaddress of server put here)
+
+ssh -i ../test.pem -l ec2-user 35.196.213.134 or internal ip
+
+10.142.0.5
+
+
+ansible -i inventory all -m ping
+
+ansible --help
+
+
+ansible -i inventory all -u ec2-user --private-key ../test.pem -m ping
+
+rm -f .ssh/known_hosts
+
+ansible --version
+
+ansible.cfg
+
+search \user
+
+private_key_file = /home/ec2-user/test.pem
+remote_user = ec2-user
+inventory = 
+
+
+ansible -i inventory all -m ping
+
+ssh known hosts error 25mar19
+
+ansible-playbook playbook/01sample.yml
+
+
+
+
+
+
+
