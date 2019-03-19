@@ -1,0 +1,100 @@
+$User = "Sivakolluri10@simplilearnb2c.onmicrosoft.com"
+$PWord = ConvertTo-SecureString -String "39a31f39a3G18=" -AsPlainText -Force
+$Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $PWord
+Login-AzureRmAccount -Credential $Credential
+
+
+$subscriptionName = 'Microsoft Azure'
+$resourceGroupName = 'df'
+$dataFactoryName = 'adf0319'
+$runStartDateTimeUTC = '2019-03-17T14:00:00Z'
+
+Get-AzureRmDataFactoryActivityWindow `
+     -DataFactoryName $dataFactoryName `
+     -ResourceGroupName $resourceGroupName `
+     -RunStart $runStartDateTimeUTC `
+     | ? {$PSItem.WindowState -eq 'Failed'} `
+     | SELECT PipelineName > C:\Users\chravitejareddy\Documents\test.txt 
+     
+     
+#Get-Content  C:\Users\chravitejareddy\Documents\test.txt | Get-Unique | Set-Content C:\Users\chravitejareddy\Documents\test1.txt
+ 
+ 
+
+
+Get-Content C:\Users\chravitejareddy\Documents\test.txt | Select-Object -Skip 3 | Select-Object -Unique | Out-File C:\Users\chravitejareddy\Documents\test1.txt
+write-host($a)
+
+
+#$text = [IO.File]::ReadAllText($a)
+
+
+$text = Get-Content $a -Raw
+
+#$array += $a
+
+#Write-Host($array)
+
+#$a=`echo $a1
+
+
+
+#([IO.File]::ReadAllText(".\test.txt")).length
+
+#$content = [IO.File]::ReadAllText("C:\Users\chravitejareddy\Documents\test.txt").split("`n").count
+
+$sdt = [System.DateTime]::Today.AddDays(-5).AddSeconds(-3)
+
+$edt = [System.DateTime]::Today.AddDays(-5)
+
+
+
+#$a="CopyPipeline-2"
+
+$pipelineNm = $a.ToString()
+
+foreach($b in $pipelineNm){
+write-host($b)
+
+
+    #Set-AzureRmDataFactoryPipelineActivePeriod -ResourceGroupName $resourceGroupName -PipelineName $b -DataFactoryName $dataFactoryName -StartDateTime $sdt -EndDateTime $edt
+
+
+    #Resume-AzureRmDataFactoryPipeline -ResourceGroupName $resourceGroupName -Name $b -DataFactoryName $dataFactoryName
+    
+    
+    }
+
+#| Out-File C:\Users\chravitejareddy\Documents\test1.txt
+
+
+Get-AzureRmDataFactoryActivityWindow `
+     -DataFactoryName $dataFactoryName `
+     -ResourceGroupName $resourceGroupName `
+     -RunStart $runStartDateTimeUTC `
+     | SELECT PipelineName, ActivityName, ActivityType, `
+              WindowState, PercentComplete `
+     | Sort-Object PipelineName | Format-Table
+
+
+
+$sdt = [System.DateTime]::Today.AddDays(-3).AddSeconds(-3)
+#Write-Host($sdt)
+$edt = [System.DateTime]::Today.AddDays(-3)
+
+
+
+Set-AzureRmDataFactoryPipelineActivePeriod -ResourceGroupName $resourceGroupName -PipelineName "CopyPipeline-2" -DataFactoryName $dataFactoryName -StartDateTime "$sdt" -EndDateTime "$edt"
+
+
+#Set-AzureRmDataFactoryPipelineActivePeriod -ResourceGroupName $resourceGroupName -PipelineName "CopyPipeline-tfl" -DataFactoryName $dataFactoryName -StartDateTime 2019-03-15T16:00:00Z -EndDateTime 2019-03-16T16:00:00Z
+
+
+#Get-AzureRmDataFactoryPipeline -ResourceGroupName "df" -DataFactoryName "$dataFactoryName" | SELECT PipelineName
+
+Suspend-AzureRmDataFactoryPipeline -ResourceGroupName $resourceGroupName -Name "CopyPipeline-test2" -DataFactoryName $dataFactoryName
+
+
+Resume-AzureRmDataFactoryPipeline -ResourceGroupName $resourceGroupName -Name $a -DataFactoryName $dataFactoryName
+
+
