@@ -98,3 +98,47 @@ Suspend-AzureRmDataFactoryPipeline -ResourceGroupName $resourceGroupName -Name "
 Resume-AzureRmDataFactoryPipeline -ResourceGroupName $resourceGroupName -Name $a -DataFactoryName $dataFactoryName
 
 
+=========================================================================================================================================
+
+$User = "Sivakolluri10@simplilearnb2c.onmicrosoft.com"
+$PWord = ConvertTo-SecureString -String "39a31f39a3G18=" -AsPlainText -Force
+$Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $PWord
+Login-AzureRmAccount -Credential $Credential
+
+
+$subscriptionName = 'Microsoft Azure'
+$resourceGroupName = 'df'
+$dataFactoryName = 'adf0319'
+$runStartDateTimeUTC = '2019-03-19T14:00:00Z'
+
+Get-AzureRmDataFactoryActivityWindow `
+     -DataFactoryName $dataFactoryName `
+     -ResourceGroupName $resourceGroupName `
+     -RunStart $runStartDateTimeUTC `
+     | ? {$PSItem.WindowState -eq 'Failed'} `
+     | SELECT PipelineName > C:\Users\chravitejareddy\Documents\test.txt 
+
+Get-Content C:\Users\chravitejareddy\Documents\test.txt | Select-Object -Skip 3 | Select-Object -Unique | Out-File C:\Users\chravitejareddy\Documents\test1.txt
+
+$array = @(Get-Content C:\Users\chravitejareddy\Documents\test1.txt |  Select-Object -Unique)
+
+$sdt = [System.DateTime]::Today.AddDays(-5).AddSeconds(-5)
+
+$edt = [System.DateTime]::Today.AddDays(-5)
+
+for($i = 0; $i -lt $array.length; $i++){ 
+
+$a =$array[$i]
+
+Set-AzureRmDataFactoryPipelineActivePeriod -ResourceGroupName "$resourceGroupName" -PipelineName "$a" -DataFactoryName "$dataFactoryName" -StartDateTime "$sdt" -EndDateTime "$edt"
+
+Resume-AzureRmDataFactoryPipeline -ResourceGroupName "$resourceGroupName" -Name "$a" -DataFactoryName "$dataFactoryName"
+    
+
+
+}
+
+
+
+
+
