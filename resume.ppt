@@ -1,0 +1,77 @@
+BALA VENKATA TEJA ATLA Email:tejaatla123@gmail.com
+ Mobile: +91-9963316338
+AWS DevOps Engineer
+ Profile:
+ AWS Cloud Engineer with over 6 months experience in system and network
+administration, managing server Infrastructures and data-center operations across
+multiple platforms (UNIX, Linux, Windows).
+ Extensive hands on experience in designing, building and automating cloud
+infrastructures on Amazon.
+ Expert-level knowledge of Amazon EC2, S3, VPC, RDS, Elastic Load Balancing, Auto
+scaling, IAM, SQS, security Groups, Cloud Watch and other AWS services.
+ Well-versed in DevOps principles and Agile software development practices.
+ Installation, Configuration and Management of RDBMS and NoSQL tools such as
+Oracle DB, MySQL, Dynamo DB, MongoDB & Cassandra.
+ Experienced on deploying multiple versions of Java with Tomcat, Apache and
+WebLogic servers on AWS cloud platform.
+ Experienced with configuration and automation tool such as ansible , to automate
+a broad range of Services.
+ Experience working on version control system tools like GIT and SVN, and also
+having strong knowledge on source Control concepts like Branches, Masters,
+Merges and Tags.
+ Experience with deployment and build management tools like Jenkins and Maven.
+ Hands on experience on development of utilities using shell scripting to automate
+processes.
+ Work experience in ansible and Docker, Writing Docker files for different
+Environments and Creating Docker Containers.
+ Technical Skills:
+ Cloud Technologies : Amazon Web Services.
+ Cloud Services : EC2, S3, VPC, Cloud Formation, RDS,
+ Dynamo DB, IAM.
+ Monitoring tools : Cloud Watch.
+ Automation and Build : Maven, Ansible, Jenkins.
+ Scripting : Shell Scripting.
+Version Control Systems : SVN, GIT.
+Operating Systems : Windows & Linux.
+Programming Languages : Java.
+ Professional Experience:
+ AWS DevOps Engineer
+ Agero Inc, Boston, MA Sep 2018 Current
+ Agero, Inc., a leading provider of vehicle and driver safety, security and information
+services. It is using or experimenting with nearly every AWS service to develop, test, build,
+and run its most critical workloads. Agero Inc is using AWS as central part of its technology
+strategy.
+ Responsibilities:
+ Worked on designing and deploying a multitude application utilizing almost all of
+the main services of the AWS stack (like EC2, S3, RDS, VPC, IAM, ELB, Cloud watch,
+Route 53, Lamda and Cloud Formation) focused on high availability, fault tolerance
+environment.
+ Created Cloud Formation Template for main services like EC2, VPC and S3 for reuse
+the current environment.
+ Created network architecture on AWS VPC, subnets, Internet Gateway, Route Table
+and NAT Setup.
+ Worked with IAM to manage the users and groups using IAM by assigning individual
+policies and roles to each users and group as per requirements.
+ Designed high availability environment for Application servers and database
+servers on EC2 by using ELB and Auto-scaling.
+ Used Cloud Watch for monitoring AWS cloud resources and the applications that
+deployed on AWS by creating new alarm, enable notification service.
+ Worked on CI/CD tools Jenkins and GIT version control system for continuous
+smooth code release process.
+ Integrated Jenkins with GitHub private repositories, build Automation tools (Maven
+and Ant), and Artifact repository for pushing successful build code.
+ Developed Shell Scripts to run the unit test on different jobs on Jenkins like testing
+the code.
+ Environment: EC2, VPC, S3, IAM, ELB, Auto Scaling, Cloud Watch, JSON, Python
+script, Shell script, Jenkins, Maven, Ant, GIT, GitHub, Puppet, Nagios and Linux
+servers.
+Experience Summary:
+Working as DevOps Engineer with ITC Infotech, Bangalore from May 2018 to till now.
+Educational Qualification:
+Bachelor of Technology in ECE (Electronics and Communication Engineering) from JNTU
+ANATAPUR.
+Declaration:
+I, hereby declare that all the details furnished above are true to the best of my knowledge
+and belief.
+DATE: (A.BALA VENKATA TEJA)
+PLACE : Bangalore
